@@ -1,0 +1,16 @@
+---
+title: "Project 6 RMD File"
+output: html_document
+---
+
+This is the R Markdown file for project 6.
+
+Group members: Travis Cox, Lola Shonaike, and Adam Humphrey
+
+Data source: https://app.enigma.io/search/source/org.un.comtrade
+
+##Summary of data
+
+
+
+
