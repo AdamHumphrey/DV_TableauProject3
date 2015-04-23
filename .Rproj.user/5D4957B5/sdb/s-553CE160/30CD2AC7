@@ -1,12 +1,12 @@
 {
-    "contents" : "---\ntitle: \"Project 6 RMD File\"\noutput: html_document\n---\n\nThis is the R Markdown file for project 6.\n\nGroup members: Travis Cox, Lola Shonaike, and Adam Humphrey\n\nData source: https://app.enigma.io/search/source/org.un.comtrade\n\n##Summary of data\n\n\n\n\n",
+    "contents" : "---\ntitle: \"Project 6 RMD File\"\noutput: html_document\n---\n\nThis is the R Markdown file for project 6.\n\nGroup members: Travis Cox, Lola Shonaike, and Adam Humphrey\n\nData source: https://app.enigma.io/search/source/org.un.comtrade\n\n##Summary of data\n\n\n\n###Sheet 1\n![My Figure](./sheet1.png)\n\nSheet 1 shows a bullet chart of the total ammo trades in USD overlaid in color by the total article leather trades in USD for countries filtered such that only countries with total ammo trades greater than 5.7 billion are shown.To reproduce the picture above in tableau, place \"Ammo Country Area\" in \"Rows\" and \"SUM(Ammo Trade Usd)\" in \"Columns\". Then place \"SUM(Al Trade Usd)\" in \"Marks\" and select the \"Bar\" graph option. Then place another \"SUM(Al Trade Usd)\" into \"Color\" under in \"Mark\". This will bring up a legend with a color gradient. Right click on that legend and select \"**Edit Colors**\" and then under the \"Palette\" option, pick \"Orange-Blue Diverging\" and press OK. Next, right click the \"SUM(Ammo Trade Usd)\" in the \"Columns\" section and select \"**Filter...**\". Select \"Range of values\" and move the lower bound to 5.7 billion and press OK. Next click the Ammo Trade Usd axis at the bottem of the visualization and select \"Add Reference Line, Band, or Box.\" Select \"Line\". Under \"scope\" select Per Cell. Under \"Line\", change \"Value:\" from \"SUM(Ammo Trade Usd)\" to \"SUM(Al Trade Usd)\" and change \"Average\" to \"Sum\", finally change \"Label:\" to \"None\". Under \"formatting\" change \"Line:\" to \"None\" and change \"Fill Below:\" to a light gray.\n\n###Sheet 2\n\n![My Figure2](./sheet2.png)\n\n###Sheet 3\n\n\n###Sheet 4",
     "created" : 1429668960801.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "1799416880",
+    "hash" : "2358924198",
     "id" : "30CD2AC7",
-    "lastKnownWriteTime" : 1429668997,
+    "lastKnownWriteTime" : 1429755834,
     "path" : "C:/Users/Travis Cox/DataVisualization/Project6/00 Doc/Project6.Rmd",
     "project_path" : "00 Doc/Project6.Rmd",
     "properties" : {
