@@ -11,7 +11,18 @@ Data source: https://app.enigma.io/search/source/org.un.comtrade
 
 ##Summary of data
 
+The data we used for this project is a breakdown of international trade for two commodities: ammunition and leather goods. The data is broken down into 10 segments: 
 
+Country Area - The country that the commodity was imported or exported from
+Year - Year which the commodity was imported or exported
+Comm Code - The code designated for each import or export
+Commodity - A description of the commodity that was traded
+Flow - Indicator of whether the commodity was imported or exported
+Trade USD - The monetary value of the import or export
+Weight - The weight of the import or export in kilograms
+Quantity Name - Indicating whether the quantity (the next column) was the number of items or weight of the import or export
+Quantity - The number of items or weight of an import or export
+Serial ID - An ID number assigned to each trade
 
 ###Sheet 1
 ![My Figure](./sheet1.png)
@@ -24,6 +35,15 @@ Sheet 1 shows a bullet chart of the total ammo trades in USD overlaid in color b
 Sheet 2 shows a bubble graph, where the size of the bubbles represents the amount of article leather quantity traded by a particular mode (modes such as Export,Import,ect...) by a particular country. The trade modes are color coded with blue for export, orange for imports, green for re-exports and red for re-imports. To reproduce this visualization, place "Ammo Flow" into "Color" and place "SUM(Al Quantity)" into "Size" in "Marks" . Then select the "Circle" option under "Marks". Next, place "Ammo Flow" and, after making sure that "Al Country Area" is linked to "Ammo Country Area", place "Al Country Area" it into "Label" in "Marks". Next, right click on "Al Country Area", and select "**Filter...**" and unselect "Null" in the "General" tab, and press OK. Finally, right click "SUM(Al Quantity)" and select "**Filter...**", choose "Special" and select "Non-null values" and press OK.
 
 ###Sheet 3
+![My Figure3](./sheet3.png)
+
+Sheet 3 shows a graph comparing the weight of a country's ammunition and leather imports and exports. The x-axis represents the total weight of ammunition imports and exports. The y-axis represents the total weight of leather imports and exports. The color of each dot corresponds with each country. This was done because most countries are clustered close to the intersection of the x and y axes. This clump shows that most countries traded less than 2 billion kilograms of ammunition and 200 million kilograms of leather goods. Names of each country also appear next to their respective dot when there is enough space on the graph.
+
+To reproduce this visualization, the following steps need to be taken:
+1. Place SUM(Al Weight) in the rows section, and place SUM(Ammo Weight) in the columns section
+2. Place the dimension Al Country Area on the label section in the Marks area to the left of the graph
+3. Place the dimension Ammo Country Area on the color section to color code each country
+4. Change various formatting sections for preference (i.e. text font, shape of marks, and colors for countries)
 
 
 ###Sheet 4
