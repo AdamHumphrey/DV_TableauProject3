@@ -23,8 +23,14 @@ Weight - The weight of the import or export in kilograms
 Quantity Name - Indicating whether the quantity (the next column) was the number of items or weight of the import or export
 Quantity - The number of items or weight of an import or export
 Serial ID - An ID number assigned to each trade
+
 ### Importing Data
+
 For All of Our Data, We got the CSV Files from https://app.enigma.io/signup. After downloading, the CSV Files, I wrote the Create Table Sql Queries necessary to make the tables.I used this site: http://www.w3schools.com/sql/sql_create_table.asp as a guidance in writing the queries. As for the data types, I typically chose them as Numbers and VarChar of 200, just to make sure the size was large enough for the data type.  Then Afterwards, I imported the CSV data into SQL Developer using Import Data Wizard. You can do this by right click the table, choosing import data. I then, matched the CSV data columns with the data columns, I had. Then it imported the data in for me. If there was an error,maybe a null data in a no null column, or string in a number column, for example, it would usually return a YourTableNamebad.sql. If this was the case, then I wouldmanually go in and delete the specific insert/update query in the DDL statement in that bad sql file to get rid of the problems. Then I would run that file again to try to import the CSV File. 
+
+###Blending relationships
+Al Flow and Ammo Flow, as well as Al Country Area and Ammo Country Area were used as the linking relationships between the two data sets, Ammo\_Revised and Articleleather\_Revised
+
 ###Sheet 1
 ![My Figure](./sheet1.png)
 
@@ -49,5 +55,6 @@ To reproduce this visualization, the following steps need to be taken:
 
 ###Sheet 4
 ![My Figure4](./sheet4.PNG)
+
 Sheet 4 is box plot is comparing for each Article Leather and Ammonution, the total Number of flows it had(import,export,reexport,reimport) in terms of actual having no quantity, the number of items, and the weight of all the flows. The pattern that is seen on the Top blox plot was what I was expecting. The lowest number would be no quantity to represent the no trade occuring. The Second number that was highest was number of items which represented how much ammonution was traded. The highest being the weight in kilograms. Interestingly enough, Article Leather was opposite with No quantity and Number of Items being about the same, and weight in Kilograms being lower. Yet, this somewhat makes sense as Articles and Leather could vary in different things that could be traded from handbags, to leather belts, to catgut. I also, put some countries on top of the boxplot, to show how they vary. The steps taking to make this visualization were, First get AmmoFlow and Al Flow into Rows and Change their measures to Count, put Ammo Quanity name in Columns and unlclick showing the header, then use AmmoFlow as a Filter 
 and Ammo Country Area. Last, for the colors I used AmmoCountry Area, and filtered by names of the countries I wanted to view. After, I also put AmmoCountryArea in labels to see them on the graph. 
