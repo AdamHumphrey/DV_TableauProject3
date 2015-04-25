@@ -54,7 +54,7 @@ To reproduce this visualization, the following steps need to be taken:
 
 
 ###Sheet 4
-![My Figure4](./sheet4.PNG)
+![My Figure4](./sheet4.png)
 
 Sheet 4 is box plot is comparing for each Article Leather and Ammonution, the total Number of flows it had(import,export,reexport,reimport) in terms of actual having no quantity, the number of items, and the weight of all the flows. The pattern that is seen on the Top blox plot was what I was expecting. The lowest number would be no quantity to represent the no trade occuring. The Second number that was highest was number of items which represented how much ammonution was traded. The highest being the weight in kilograms. Interestingly enough, Article Leather was opposite with No quantity and Number of Items being about the same, and weight in Kilograms being lower. Yet, this somewhat makes sense as Articles and Leather could vary in different things that could be traded from handbags, to leather belts, to catgut. I also, put some countries on top of the boxplot, to show how they vary. The steps taking to make this visualization were, First get AmmoFlow and Al Flow into Rows and Change their measures to Count, put Ammo Quanity name in Columns and unlclick showing the header, then use AmmoFlow as a Filter 
 and Ammo Country Area. Last, for the colors I used AmmoCountry Area, and filtered by names of the countries I wanted to view. After, I also put AmmoCountryArea in labels to see them on the graph. 
